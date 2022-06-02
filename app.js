@@ -6,7 +6,8 @@ const rounded = document.querySelector(".round");
 const toggle = document.querySelector(".toggle");
 const button = document.querySelector("button")
 const warning = document.querySelector(".warning")
-const password = 123456;
+const login = document.querySelector(".login")
+const password = 1233211;
 
 onOff.addEventListener("click",()=>{
       
@@ -34,9 +35,13 @@ toggle.addEventListener("click",()=>{
 
 button.addEventListener("click",()=>{
     if(input.value==password){
-        console.log("hello world")
+        login.style.opacity="1";
+        warning.style.opacity="0";
+        timeout2 = setTimeout(loginout,2000)
     }else {
         warning.style.opacity="1";
+        login.style.opacity="0";
+
         timeout2 = setTimeout(warningsout,2000)
     }
 })
@@ -45,4 +50,8 @@ button.addEventListener("click",()=>{
 
 function warningsout(){
     warning.style.opacity="0";
+}
+
+function loginout(){
+    login.style.opacity="0";
 }
