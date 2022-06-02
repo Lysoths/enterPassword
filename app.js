@@ -4,6 +4,9 @@ const eyeOff = document.querySelector(".off");
 const onOff = document.querySelector(".on-off");
 const rounded = document.querySelector(".round");
 const toggle = document.querySelector(".toggle");
+const button = document.querySelector("button")
+const warning = document.querySelector(".warning")
+const password = 123456;
 
 onOff.addEventListener("click",()=>{
       
@@ -28,3 +31,18 @@ toggle.addEventListener("click",()=>{
   }
     
 })
+
+button.addEventListener("click",()=>{
+    if(input.value==password){
+        console.log("hello world")
+    }else {
+        warning.style.opacity="1";
+        timeout2 = setTimeout(warningsout,2000)
+    }
+})
+
+
+
+function warningsout(){
+    warning.style.opacity="0";
+}
